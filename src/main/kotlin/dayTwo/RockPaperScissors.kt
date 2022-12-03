@@ -4,25 +4,26 @@ import kotlin.math.min
 
 object RockPaperScissors {
     private val file = FileLoader.getFile("RockPaperScissorsInput.txt")
+
+    private val mineToPoint = mapOf(
+        "X" to 1,
+        "Y" to 2,
+        "Z" to 3
+    )
+
+    private val opponentToWinner = mapOf(
+        "A" to "Y",
+        "B" to "Z",
+        "C" to "X"
+    )
+
+    private val opponentToDraw = mapOf(
+        "A" to "X",
+        "B" to "Y",
+        "C" to "Z"
+    )
+
     fun partOne() {
-
-        val mineToPoint = mapOf(
-            "X" to 1,
-            "Y" to 2,
-            "Z" to 3
-        )
-
-        val opponentToWinner = mapOf(
-            "A" to "Y",
-            "B" to "Z",
-            "C" to "X"
-        )
-
-        val mineToOpponent = mapOf(
-            "X" to "A",
-            "Y" to "B",
-            "Z" to "C"
-        )
 
         var total = 0
         file.forEachLine { line ->
@@ -32,7 +33,7 @@ object RockPaperScissors {
                 total += 6
             }
 
-            if (mineToOpponent[mine] == opponent) {
+            if (opponentToDraw[opponent] == mine) {
                 total += 3
             }
 
@@ -43,24 +44,6 @@ object RockPaperScissors {
     }
 
     fun partTwo() {
-
-        val mineToPoint = mapOf(
-            "X" to 1,
-            "Y" to 2,
-            "Z" to 3
-        )
-
-        val opponentToWinner = mapOf(
-            "A" to "Y",
-            "B" to "Z",
-            "C" to "X"
-        )
-
-        val opponentToDraw = mapOf(
-            "A" to "X",
-            "B" to "Y",
-            "C" to "Z"
-        )
 
         val opponentToLoose = mapOf(
             "A" to "Z",
