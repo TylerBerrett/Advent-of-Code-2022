@@ -1,7 +1,4 @@
 package dayTwo
-
-import kotlin.math.min
-
 object RockPaperScissors {
     private val file = FileLoader.getFile("RockPaperScissorsInput.txt")
 
