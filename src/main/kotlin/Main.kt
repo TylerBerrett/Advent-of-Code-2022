@@ -12,4 +12,5 @@ fun dayOne() {
 
 fun dayTwo() {
     RockPaperScissors.partOne()
+    RockPaperScissors.partTwo()
 }
