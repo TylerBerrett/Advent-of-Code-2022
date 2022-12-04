@@ -1,9 +1,10 @@
+import dayFour.CampCleanup
 import dayOne.CalorieCounting
 import dayThree.RucksackReorganization
 import dayTwo.RockPaperScissors
 
 fun main() {
-    dayThree()
+    dayFour()
 }
 
 fun dayOne() {
@@ -19,4 +20,9 @@ fun dayTwo() {
 fun dayThree() {
     RucksackReorganization.partOne()
     RucksackReorganization.partTwo()
+}
+
+fun dayFour() {
+    CampCleanup.partOne()
+    CampCleanup.partTwo()
 }
